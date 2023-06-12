@@ -6,7 +6,7 @@ O desenvolvimento da API procurou utilizar  os conhecimentos lecionados na Disci
 
 Para o desenvolvimento da interface utilizamos a framework REACT.
 
-![REACT](imagens/react.png)
+![REACT](/Documentos/Imagens/react.png "React")
 
 outras librarias usadas
 
