@@ -15,7 +15,7 @@ React Hook Form é uma biblioteca que auxilia na criação e validação dos for
 fazendo com que a captura de ações do formulário também seja mais objetiva. Outra facilidade que ele traz é na melhora significativa de desempenho, já que a 
 ação de renderização também pode ser controlada. Dessa forma, apenas as alterações de entradas são rerrenderizadas, não o formulário inteiro..
 
-![Redux]
+##[Redux]
 Redux é uma biblioteca para armazenamento de estados de aplicações JavaScript, criado por Dan Abramov. Ele nasceu através de uma implementação do Flux, 
 uma arquitetura criada pelo Facebook para contribuir com as aplicações de User Interface, utilizando o conceito de fluxo de dados unidirecional. Quando 
 desenvolvemos aplicações utilizando Javascript, sempre temos que lidar com o gerenciamento de estado. O Redux veio para suprir essa necessidade de simplificar 
@@ -29,7 +29,7 @@ Fazendo o uso do Redux todos esses estados ficarão armazenados em uma árvore d
       seu componente requisita. A store armazena de forma centralizada todos os estados da aplicação. Vale ressaltar que a store é imutável.
   * Actions: São ações disparadas da aplicação para o store. Elas são criadas através das action creators. As actions são a única forma de acionar 
       uma mudança de estados no store.
-  *Reducers: Cada dado da store deve ter o seu próprio reducer. Ele é encarregado de lidar com todas as ações e especificam como o estado da 
+  * Reducers: Cada dado da store deve ter o seu próprio reducer. Ele é encarregado de lidar com todas as ações e especificam como o estado da 
       aplicação irá mudar de acordo com a action que foi enviada para o store.
 
 ##Redux Toolkit
