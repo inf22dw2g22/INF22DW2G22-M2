@@ -43,5 +43,5 @@ Para o desenvolvimento do projeto criou-se um modelo basico de faturaçao, em qu
 * [Recursos](Documentos/Recursos.md)
 * [Desenvolvimento](Documentos/Desenvolvimento.md)
 
-[< Previous] | [^ Main](../../../) | [Next >](documentos/recuros.md)
+[< Previous] | [^ Main](../../../) | [Next >](documentos/recursos.md)
 :--- | :---: | ---: 
