@@ -21,7 +21,7 @@ Para o desenvolvimento do projeto criou-se um modelo basico de faturaçao, em qu
 
 ## Galeria
 # Swagger IO
-![swagger](/Documentos/Imagens/swagger.png "Swagger")
+![swagger](/Documentos/Imagens/swagger_2.png "Swagger")
 
 # Docker
 ![Docker](/Documentos/Imagens/docker_images.png "Docker")
