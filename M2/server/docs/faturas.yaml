@@ -18,21 +18,26 @@ paths:
                 items:
                   $ref: '#/definitions/Fatura'
     post:
-        tags:               
-          - Fatura
-        summary: Create fatura secured resource
-        consumes:
-        - application/json
-        requestBody:
-          description : create fatura
-          content :
-            application/json :
-              schema:
-                products:
+      tags:               
+        - Fatura
+      summary: Create fatura secured resource
+      consumes:
+      - application/json
+      requestBody:
+        description : create detalheFatura
+        content : 
+          application/json:
+            schema:
+              properties:
+                clienteId:
+                  type: integer
+                descricao:
+                  type: string
+                produtos:
                   type: array
                   items:
                     $ref: '#/definitions/detalheFatura'
-        responses:
+      responses:
           "200":
             description: Create a fatura
             content:
@@ -86,8 +91,6 @@ definitions:
   detalheFatura:
     type: object
     properties:
-        faturaId:
-          type: integer
         produtoId: 
           type: integer
         quantidade : 
