@@ -48,5 +48,8 @@ que nada mais é que o formato que os seus campos devem seguir, ou seja, se tive
 do Yup definimos um schema para isso. Os esquemas (schemas) são muito flexíveis e permitem modelar complexas validações, correlacionadas ou não e até mesmo 
 transformação de valores.
 
+## Docker
+Foi criado um repositório público no Docker Hub com o nome a040225/inf22dw2g22-m2, por forma a disponibilizar as imagens do nosso projeto.
+
 ---
 [< Previous](Recursos.md) | [^ Main](../../../) |
