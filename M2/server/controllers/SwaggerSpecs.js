@@ -13,7 +13,7 @@ const swaggerDefinition = {
     servers: [ {url: "http://localhost:" + config.PORT,},],
     components: {
       securitySchemes: {
-        basicAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" },
+        bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" },
       },
     },
     security: [{ bearerAuth: [] }],
