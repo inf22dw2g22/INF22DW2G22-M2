@@ -2,7 +2,7 @@
 
 _A API tem os seguintes recursos_
 
-## users
+## Users
 que contem os seguintes elementos (id, firstname, lastname, username  e hash)
 
 ## Clientes
