@@ -1,0 +1,106 @@
+paths:
+  /clientes/:
+    get:                 
+      tags:               
+        - Cliente           
+      summary: Clientes secured resource
+      produces:
+      - application/json
+      responses:          
+        200:
+          description: Success Message
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/Cliente'
+    post:
+        tags:               
+          - Cliente
+        summary: Create Cliente
+        consumes:
+        - application/json
+        requestBody:
+          description : create cliente
+          content :
+            application/json :
+              schema:
+                  $ref: '#/definitions/ClienteCreate' 
+        responses:
+          "200":
+            description: Create a User
+            content:
+              application/json:
+                schema:
+                  $ref: '#/definitions/ClienteCreate'
+  /clientes/{nome}:
+    get:                 
+      tags:               
+        - Cliente            
+      summary:  get cliente  by name - secured resource
+      parameters:
+      - name : nome
+        in: path
+        required: true
+        style: simple
+        explode: false
+      security: []  
+      produces:
+      - application/json
+      responses:          
+        200:
+          description: Success Message
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/Cliente'
+  /clientes/{id}:
+    put: 
+      tags:               
+        - Cliente           
+      summary:  change cliente   - secured resource
+      requestBody:
+        description : update cliente
+        content :
+          application/json :
+            schema:
+              $ref: '#/definitions/ClienteUpdate' 
+      responses:
+          "200":
+            description: update a cliente
+            content:
+              application/json:
+                schema:
+                  $ref: '#/definitions/ClienteCreate'
+definitions:        
+  Cliente:
+    type: object
+    properties:
+      cliente:
+        type: object
+        properties:
+          id:
+            type: number
+          nome:
+            type: string
+          morada:
+            type: string
+  ClienteCreate:
+    type: object
+    properties:
+        nome:
+          type: string
+        morada:
+          type: string
+  ClienteUpdate:  
+    type: object
+    properties:
+      id :
+        type : number
+      nome:
+        type: string
+      morada:
+        type: string

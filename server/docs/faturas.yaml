@@ -1,0 +1,94 @@
+paths:
+  /faturas/:
+    get:                 
+      tags:               
+        - Fatura            
+      summary: Access to secured resource
+      security: 
+      - basicAuth: []
+      produces:
+      - application/json
+      responses:          
+        200:
+          description: Success Message
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/Fatura'
+    post:
+        tags:               
+          - Fatura
+        summary: Create fatura secured resource
+        consumes:
+        - application/json
+        requestBody:
+          description : create fatura
+          content :
+            application/json :
+              schema:
+                products:
+                  type: array
+                  items:
+                    $ref: '#/definitions/detalheFatura'
+        responses:
+          "200":
+            description: Create a fatura
+            content:
+              application/json:
+                schema:
+                  $ref: '#/definitions/FaturaCreate'
+  /faturas/{id}:
+    get:                 
+      tags:               
+        - Fatura            
+      summary: Access to secured resource
+      parameters:
+      - name : id
+        in: path
+        required: true
+        style: simple
+        explode: false
+      security: []  
+      produces:
+      - application/json
+      responses:          
+        200:
+          description: Success Message
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/Fatura'
+
+definitions:        
+  Fatura:
+    type: object
+    properties:
+      user:
+        type: object
+        properties:
+          id:
+            type: number
+          clienteId:
+            type: integer
+          descricao:
+            type: string
+  FaturaCreate:
+    type: object
+    properties:
+        clienteId:
+          type: integer
+        descricao:
+          type: string
+  detalheFatura:
+    type: object
+    properties:
+        faturaId:
+          type: integer
+        produtoId: 
+          type: integer
+        quantidade : 
+          type : integer
