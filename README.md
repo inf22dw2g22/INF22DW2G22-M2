@@ -24,7 +24,7 @@ Para o desenvolvimento do projeto criou-se um modelo basico de faturaçao, em qu
 ![swagger](/Documentos/Imagens/swagger.png "Swagger")
 
 # Docker
-![Docker](/Documentos/Imagens/docker_imagens.png "Docker")
+![Docker](/Documentos/Imagens/docker_images.png "Docker")
 
 # MySQL
 ![swagger](/Documentos/Imagens/mysql.png "MySQL")
