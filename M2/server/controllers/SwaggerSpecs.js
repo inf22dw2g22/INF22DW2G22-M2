@@ -5,9 +5,9 @@ const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerDefinition = {
     openapi: "3.0.0",
     info: { 
-      title: "JWT",
+      title: "BasicAuthentication",
       version: "1.0.0",
-      description: "JWT",
+      description: "Basic Authentication",
       contact: { name: "Your name" },
     },
     servers: [ {url: "http://localhost:" + config.PORT,},],
