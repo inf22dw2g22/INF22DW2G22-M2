@@ -1,0 +1,118 @@
+paths:
+  /produtos/:
+    get:                 
+      tags:               
+        - Produto           
+      summary: produtos public resource
+      produces:
+      - application/json
+      responses:          
+        200:
+          description: Success Message
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/Produto'
+    post:
+        tags:               
+          - Produto
+        summary: Create Produto
+        consumes:
+        - application/json
+        requestBody:
+          description : create Produto
+          content :
+            application/json :
+              schema:
+                  $ref: '#/definitions/ProdutoCreate' 
+        responses:
+          "200":
+            description: Create a Produto
+            content:
+              application/json:
+                schema:
+                  $ref: '#/definitions/ProdutoCreate'
+  /produtos/{nome}:
+    get:                 
+      tags:               
+        - Produto            
+      summary:  get Produto  by name - secured resource
+      parameters:
+      - name : nome
+        in: path
+        required: true
+        style: simple
+        explode: false
+      security: []  
+      produces:
+      - application/json
+      responses:          
+        200:
+          description: Success Message
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/definitions/Produto'
+  /produtos/id/{id}:
+    get:                 
+        tags:               
+          - Produto            
+        summary: Access to secured resource
+        parameters:
+        - name : id
+          in: path
+          required: true
+          style: simple
+          explode: false
+        security: []  
+        produces:
+        - application/json
+        responses:          
+          200:
+            description: Success Message
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/definitions/Produto'
+    put: 
+      tags:               
+        - Produto          
+      summary:  change Produto   - secured resource
+      requestBody:
+        description : update Produto
+        content :
+          application/json :
+            schema:
+              $ref: '#/definitions/ProdutoCreate' 
+      responses:
+          "200":
+            description: update a Produto
+            content:
+              application/json:
+                schema:
+                  $ref: '#/definitions/ProdutoCreate'
+
+definitions:        
+  Produto:
+    type: object
+    properties:
+      id:
+        type: number
+      nome:
+          type: string
+      preco:
+          type: number
+  ProdutoCreate:
+    type: object
+    properties:
+        nome:
+          type: string
+        preco:
+            type: number
+  ClienteProduto:  
